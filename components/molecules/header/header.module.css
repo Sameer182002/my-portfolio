@@ -1,0 +1,73 @@
+.options{
+    display: none;
+}
+.options>p{
+    text-transform: uppercase;
+    color: var(--global-primary-color-one);
+}
+
+@media screen and (min-width: 1024px){
+    .mainWrapper{
+        padding: 0 5rem;
+    }
+    .headerLogo{
+        width: 2rem;
+        height: 2rem;
+    }
+    .options{
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+        padding: 1.3rem 2rem 1rem 0;
+        width: 100%;
+    }
+    .options>p{
+        font-size: 0.85rem;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        display: inline-block;
+        position: relative;
+    }
+    .options>p::after {
+        content: '';
+        position: absolute;
+        bottom: -5px; 
+        left: 0;
+        width: 0;
+        height: 2px; 
+        background-color: #000; 
+        transition: width 0.3s ease;
+    }
+
+    .options>p:hover::after {
+        width: 100%;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: rgb(249,255,254);
+        background: linear-gradient(135deg, rgba(249,255,254,1) 0%, rgba(205,255,250,1) 100%);
+        z-index: 110;
+    }
+    @keyframes waveAnimation {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-10px); 
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    .active{
+        color: red !important;
+    }
+}
