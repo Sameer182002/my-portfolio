@@ -1,0 +1,23 @@
+.mainWrapper{
+    transition: background-color 0.3s ease-in-out;
+    color: var(--global-primary-color-two);
+    background-color: unset;
+    border: 1px solid var(--global-primary-color-two);
+    padding: 0.8rem 2rem;
+    border-radius: 23px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.mainWrapper:hover{
+    background-color: var(--global-primary-color-two);
+    color: #fff;
+}
+
+@media screen and (min-width:1024px){
+    .mainWrapper{
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
