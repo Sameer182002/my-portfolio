@@ -1,0 +1,21 @@
+.progressBarContainer {
+    width: 100%;
+    background-color: var(--global-primary-color-four);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 0.1px solid rgb(222, 219, 219);
+}
+  
+.progressBar {
+    height: 9px;
+    background-color: var(--global-primary-color-three);
+    transition: width 0.2s ease-in-out; 
+}
+
+
+@media screen and (min-width:1024px) {
+    .progressBar{
+        height: 8px;
+    }
+}
+  

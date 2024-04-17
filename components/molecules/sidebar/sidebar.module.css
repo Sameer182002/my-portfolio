@@ -1,0 +1,62 @@
+.mainWrapper {
+    position: relative;
+}
+.mobileNavToggle {
+    display: block;
+    cursor: pointer;
+    text-align: end;
+    padding: 1rem;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgb(249,255,254);
+    background: linear-gradient(135deg, rgba(249,255,254,1) 0%, rgba(205,255,250,1) 100%);
+    z-index: 110;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -950px;
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transition: right 0.4s ease; 
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar.open {
+    right: 0; 
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.options {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.optionItem{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--global-primary-color-two);
+}
+.iconAndText{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+@media screen and (min-width:1024px) {
+    .mainWrapper{
+        display: none;
+    }
+}
